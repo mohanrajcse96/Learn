@@ -1,0 +1,30 @@
+<div class="dropdown">
+    <button class="dropbtn" *ngIf="account.address !== ''">
+        {{account.network}} - {{account.address.slice(0, 5)}}...{{account.address.slice(account.address.length - 5)}}
+    </button>
+    <button class="dropbtn" *ngIf="account.address == ''">
+        Connect Wallet
+    </button>
+    <div class="dropdown-content" *ngIf="account.address == ''">
+        <a href="#" (click)="connectMetamask()">
+            <img src="assets/images/metamask.png" width="20" class="me-2" alt="ICO Crowd Sale">
+            <span class="fs-6">
+                Metamask
+            </span>
+        </a>
+        <a href="#">
+            <img (click)="connectWallet()" src="assets/images/wallet.png" width="20" class="me-2" alt="ICO Crowd Sale"> 
+            <span class="fs-6">
+                Wallet Connect
+            </span>
+        </a>
+    </div>
+    <div class="dropdown-content" *ngIf="account.address !== ''">
+        <a href="#" (click)="disconnect()">
+            <img src="assets/images/disconnect.png" width="20" class="me-2" alt="ICO Crowd Sale">
+            <span class="fs-6">
+                Disconnect
+            </span>
+        </a>
+    </div>
+  </div>
