@@ -21,7 +21,17 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "test": [
+        "dist/test/test",
+        "dist/test"
+      ],
+      "testpratice": [
+        "dist/testpratice/testpratice",
+        "dist/testpratice"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
